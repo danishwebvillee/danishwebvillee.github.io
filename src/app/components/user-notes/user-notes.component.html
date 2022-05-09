@@ -1,0 +1,31 @@
+<div class="container">
+    <app-add-note></app-add-note>
+    <h2 class="mt-5">My Notes</h2>
+    <div class="row">
+        <ng-container *ngIf="!spinner; else showSpinner">
+            <div class="col-md-4 mb-3" *ngFor="let note of notes">
+                <mat-card>
+                    <mat-card-title class="d-flex justify-content-between">
+                        <span>{{note.title}}</span>
+                        <div>
+                            <mat-icon (click)="editNoteDialog(note.id)" aria-hidden="false"
+                                aria-label="Example home icon" class="text-primary">edit
+                            </mat-icon>
+                            <mat-icon (click)="deleteNote(note.id)" aria-hidden="false" aria-label="Example home icon"
+                                class="text-danger">delete
+                            </mat-icon>
+                        </div>
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{note.note}}
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </ng-container>
+        <ng-template #showSpinner>
+            <mat-spinner></mat-spinner>
+        </ng-template>
+
+    </div>
+
+</div>

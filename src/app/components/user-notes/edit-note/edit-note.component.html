@@ -1,0 +1,21 @@
+<h1>Edit Note</h1>
+<form [formGroup]="editNoteForm" class="example-form" (ngSubmit)="updateNote()" *ngIf="note">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="" formControlName="title" [(ngModel)]="note.title">
+        <mat-error *ngIf="editNoteForm.get('title').invalid">
+            Title field is required
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Note</mat-label>
+        <textarea matInput formControlName="note" [(ngModel)]="note.note">{{note.note}}</textarea>
+        <mat-error
+            *ngIf="editNoteForm.get('note').invalid && (editNoteForm.get('note').dirty || editNoteForm.get('note').touched)">
+            Note must be at least 50 characters long.
+        </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="editNoteForm.invalid" class="me-2">Update Note</button>
+    <button mat-raised-button color="accent" type="button" (click)="closeDialog()">Close</button>
+</form>

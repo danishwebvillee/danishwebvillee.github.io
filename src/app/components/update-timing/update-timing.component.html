@@ -1,0 +1,125 @@
+<div class="container">
+    <form [formGroup]="updateTimingForm" (ngSubmit)="submitTiming()" *ngIf="timing">
+        <h2>Timing</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First A</mat-label>
+                    <input matInput [ngxTimepicker]="picker_first_a" formControlName="first_a"
+                        [(ngModel)]="timing.first_a">
+                    <ngx-material-timepicker #picker_first_a></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('first_a').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First J</mat-label>
+                    <input matInput [ngxTimepicker]="picker_first_j" formControlName="first_j"
+                        [(ngModel)]="timing.first_j">
+                    <ngx-material-timepicker #picker_first_j></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('first_j').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Second A</mat-label>
+                    <input matInput [ngxTimepicker]="picker_second_a" formControlName="second_a"
+                        [(ngModel)]="timing.second_a">
+                    <ngx-material-timepicker #picker_second_a></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('second_a').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Second J</mat-label>
+                    <input matInput [ngxTimepicker]="picker_second_j" formControlName="second_j"
+                        [(ngModel)]="timing.second_j">
+                    <ngx-material-timepicker #picker_second_j></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('second_j').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Third A</mat-label>
+                    <input matInput [ngxTimepicker]="picker_third_a" formControlName="third_a"
+                        [(ngModel)]="timing.third_a">
+                    <ngx-material-timepicker #picker_third_a></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('third_a').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Third J</mat-label>
+                    <input matInput [ngxTimepicker]="picker_third_j" formControlName="third_j"
+                        [(ngModel)]="timing.third_j">
+                    <ngx-material-timepicker #picker_third_j></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('third_j').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Fourth A</mat-label>
+                    <input matInput [ngxTimepicker]="picker_fourth_a" formControlName="fourth_a"
+                        [(ngModel)]="timing.fourth_a">
+                    <ngx-material-timepicker #picker_fourth_a></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('fourth_a').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Fourth J</mat-label>
+                    <input matInput [ngxTimepicker]="picker_fourth_j" formControlName="fourth_j"
+                        [(ngModel)]="timing.fourth_j">
+                    <ngx-material-timepicker #picker_fourth_j></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('fourth_j').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Fifth A</mat-label>
+                    <input matInput [ngxTimepicker]="picker_fifth_a" formControlName="fifth_a"
+                        [(ngModel)]="timing.fifth_a">
+                    <ngx-material-timepicker #picker_fifth_a></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('fifth_a').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Fifth J</mat-label>
+                    <input matInput [ngxTimepicker]="picker_fifth_j" formControlName="fifth_j"
+                        [(ngModel)]="timing.fifth_j">
+                    <ngx-material-timepicker #picker_fifth_j></ngx-material-timepicker>
+                    <mat-error *ngIf="updateTimingForm.get('fifth_j').invalid">
+                        Field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-raised-button color="primary">Update Timing</button>
+    </form>
+</div>
